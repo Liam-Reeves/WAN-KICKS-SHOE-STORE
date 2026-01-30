@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure page content is not hidden under the fixed navbar */
+body {
+    padding-top: 70px;
+    /* matches navbar height (adjust if needed) */
+}
+
+/* Keep global reset but avoid forcing nav height which conflicts with Bootstrap */
+/* let Bootstrap control nav sizing */
+
+/* Use container spacing instead of forcing .container-fluid globally */
+.container {
+    max-width: 1140px;
+}
+
+.navbar-nav i {
+    font-size: 18px;
+}
+
+/* Avoid large fixed padding for dropdowns; use margin utilities when needed */
+.dropdown-menu {
+    min-width: 8rem;
+}
+
+/* Active link styling */
+.navbar-nav .nav-link.active {
+    font-weight: 600;
+    color: #000 !important;
+}
+
+/* Small responsive tweaks */
+@media (max-width: 576px) {
+    body {
+        padding-top: 80px;
+    }
+}
+
+/* Carousel: make it fill the viewport height below the fixed navbar */
+.carousel,
+.carousel-inner,
+.carousel-item {
+    height: calc(100vh - 70px);
+    /* viewport minus navbar height */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 60vh;
+    object-fit: contain;
+    /* maintain aspect ratio and cover the area */
+
+}
+
+/* On small screens, limit carousel height so content below is visible without huge scrolling */
+@media (max-width: 576px) {
+
+    .carousel,
+    .carousel-inner,
+    .carousel-item {
+        height: calc(60vh - 80px);
+    }
+}
+
+main .carousel-item img {
+    height: fit-content;
+
+}
+
+/* Left sticky vertical social bar */
+.social-bar {
+    position: fixed;
+    left: 0;
+    top: 40%;
+    transform: translateY(-50%);
+    z-index: 1050;
+    /* above most content but below modals */
+}
+
+.social-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-bar li {
+    margin: 6px 0;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    text-decoration: none;
+    color: #fff;
+    padding: 0;
+    border-radius: 50%;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+.social-link i {
+    font-size: 16px;
+    line-height: 1;
+}
+
+.social-link:hover {
+    transform: scale(1.06);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+/* brand colors (tweak as needed) */
+.social-link.facebook {
+    background: #1877F2;
+}
+
+.social-link.twitter {
+    background: #1DA1F2;
+}
+
+.social-link.instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.social-link.whatsapp {
+    background: #25D366;
+    color: #0a0a0a;
+}
+
+/* Hide on small screens */
+@media (max-width: 768px) {
+    .social-bar {
+        display: none;
+    }
+}
+
+/* Footer styles: black & white theme with colored social icons */
+.site-footer {
+    background: #000;
+    color: #fff;
+    padding: 20px 20px;
+    font-size: 15px;
+}
+
+.site-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.site-footer .footer-inner {
+    padding: 0 16px;
+}
+
+.site-footer .footer-heading {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.site-footer .footer-text {
+    color: #dcdcdc;
+    margin-bottom: 12px;
+}
+
+.site-footer .footer-links,
+.site-footer .contact-list,
+.site-footer .bottom-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-footer .footer-links li,
+.site-footer .contact-list li {
+    margin-bottom: 8px;
+}
+
+.site-footer .footer-links a {
+    color: #fff;
+}
+
+.site-footer .footer-divider {
+    border-color: rgba(255, 255, 255, 0.06);
+    margin: 28px 0;
+}
+
+.site-footer .footer-payments i {
+    font-size: 20px;
+    color: #fff;
+    margin-right: 8px;
+    opacity: 0.85;
+}
+
+.site-footer .newsletter-form .form-control {
+    background: #111;
+    border: 1px solid #222;
+    color: #fff;
+}
+
+.site-footer .newsletter-form .form-control::placeholder {
+    color: #777;
+}
+
+.site-footer .newsletter-form .btn {
+    background: #fff;
+    color: #000;
+    border: 0;
+}
+
+.site-footer .footer-social {
+    margin-top: 12px;
+}
+
+.site-footer .footer-social .social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: #111;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform .16s ease;
+}
+
+.site-footer .footer-social .social i {
+    font-size: 16px;
+}
+
+.site-footer .footer-social .social:hover {
+    transform: translateY(-3px);
+}
+
+/* Preserve brand colors for social icons */
+.site-footer .footer-social .facebook {
+    background: transparent;
+    color: #1877F2;
+}
+
+.site-footer .footer-social .twitter {
+    background: transparent;
+    color: #1DA1F2;
+}
+
+.site-footer .footer-social .instagram {
+    background: transparent;
+    color: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.site-footer .footer-social .whatsapp {
+    background: transparent;
+    color: #25D366;
+}
+
+/* Instagram gradient can't be applied to font icon color; use background gradient + mask for better effect on modern browsers */
+.site-footer .footer-social .instagram {
+    position: relative;
+}
+
+.site-footer .footer-social .instagram i {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.site-footer .small-bottom-row {
+    margin-top: 10px;
+    padding-top: 6px;
+}
+
+.site-footer .copyright {
+    margin: 0;
+    color: #bbb;
+}
+
+.site-footer .bottom-links {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.site-footer .bottom-links li {
+    display: inline;
+}
+
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 36px 0 20px;
+    }
+
+    .site-footer .bottom-links {
+        justify-content: flex-start;
+        margin-top: 12px;
+    }
+
+    .site-footer .small-right {
+        text-align: left !important;
+    }
+}
+
+.Jordan-section .card a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+}
+
+.Jordan-section .card .card-title {
+    text-align: center;
+}
+
+.Jordan-section .card {
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.nike-section .card a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+}
+
+.nike-section .row .col-md-4 .card {
+    width: 100%;
+    height: 100%;
+}
+
+.nike-section .row .col-md-4 .card .card-body {
+    text-align: center;
+}
+
+.nike-section .row .col-md-4 .card .img-box {
+    margin: 20px 20px;
+    background: #BAB8B8;
+}
+
+.why-container {
+    margin: 20px 20px;
+    justify-content: center;
+    padding: 20px 20px;
+
+}
+
+.why-container .why-header {
+    text-align: center;
+
+
+}
+
+.why-container .why-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.why-container .why-header p {
+    font-size: 18px;
+    color: #555555;
+    margin-bottom: 30px;
+}
+
+.why-card {
+    background: #F5F5F5;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.why-card-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.footer-section {
+    background: #FFFFFF;
+
+    padding: 40px 20px;
+    text-align: center;
+    height: 100vh;
+
+}
