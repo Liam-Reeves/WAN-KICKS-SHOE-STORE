@@ -1,0 +1,13 @@
+*{
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cart-header {
+   
+ 
+    padding: 20px;
+    text-align: center;
+    margin: 20px 40px;
+}
