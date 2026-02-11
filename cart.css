@@ -1,13 +1,343 @@
-*{
+* {
     margin: auto;
     padding: 0;
     box-sizing: border-box;
 }
+hr{
+    background: #000000;
+}
+.cart-heading {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+.cart-section {
+    display: flex;
+    flex-direction: row;
+}
 
 .cart-header {
-   
- 
     padding: 20px;
-    text-align: center;
     margin: 20px 40px;
+}
+
+.cart-container {
+    margin: 20px 20px;
+}
+
+.cart-item-container {
+    width: 60%;
+    padding-left: 50px;
+    flex-direction: column;
+    background: #f5f5f5;
+    border: 1px solid #ff6600;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.cart-item {
+    display: flex;
+    padding: 20px 20px;
+}
+
+.cart-item img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+
+}
+
+.item-details {
+    text-align: left;
+    margin-top: 20px;
+
+}
+.order-section{
+    width: 40%;
+    padding: 20px;
+    text-align: left;
+    background: #f5f5f5;
+    height: 100vh;
+    margin-right: 50px;
+}
+.order-section h3{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.delivery{
+    padding: 20px 20px;
+    margin: 20px 20px;
+}
+.sub-totals{
+    margin-top: 20px;
+}
+/* Container Styling to match the card look */
+.order-section {
+    background-color: #fff;
+    padding: 20px;
+    width: 300px;
+    /* Adjust based on your layout */
+    border: 1px solid #e0e0e0;
+    
+}
+
+.order-section h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #000000
+}
+
+
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+
+.checkbox-row {
+    margin-bottom: 5px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  
+}
+
+hr {
+    border: 0;
+    border-top: 1px dotted #ccc;
+    margin: 15px 0;
+}
+
+.total-section {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    width: 100%;
+    background-color: #ff6600;
+  
+    color: white;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.btn-primary:hover {
+    background-color: #e65c00;
+}
+.why-container {
+    margin: 20px 20px;
+    justify-content: center;
+    padding: 20px 20px;
+
+}
+
+.why-container .why-header {
+    text-align: center;
+
+
+}
+
+.why-container .why-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.why-container .why-header p {
+    font-size: 18px;
+    color: #555555;
+    margin-bottom: 30px;
+}
+
+.why-card {
+    background: #F5F5F5;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.why-card-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+.why-card .why-icon i{
+    font-size: 40px;
+    color: #ff6600;
+    margin-bottom: 15px;
+}
+
+
+
+.site-footer {
+    background: #000;
+    color: #fff;
+    padding: 20px 20px;
+    font-size: 15px;
+    margin-top: 50px;
+}
+
+.site-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.site-footer .footer-inner {
+    padding: 0 16px;
+}
+
+.site-footer .footer-heading {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.site-footer .footer-text {
+    color: #dcdcdc;
+    margin-bottom: 12px;
+}
+
+.site-footer .footer-links,
+.site-footer .contact-list,
+.site-footer .bottom-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-footer .footer-links li,
+.site-footer .contact-list li {
+    margin-bottom: 8px;
+}
+
+.site-footer .footer-links a {
+    color: #fff;
+}
+
+.site-footer .footer-divider {
+    border-color: rgba(255, 255, 255, 0.06);
+    margin: 28px 0;
+}
+
+.site-footer .footer-payments i {
+    font-size: 20px;
+    color: #fff;
+    margin-right: 8px;
+    opacity: 0.85;
+}
+
+.site-footer .newsletter-form .form-control {
+    background: #111;
+    border: 1px solid #222;
+    color: #fff;
+}
+
+.site-footer .newsletter-form .form-control::placeholder {
+    color: #777;
+}
+
+.site-footer .newsletter-form .btn {
+    background: #fff;
+    color: #000;
+    border: 0;
+}
+
+.site-footer .footer-social {
+    margin-top: 12px;
+}
+
+.site-footer .footer-social .social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: #111;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform .16s ease;
+}
+
+.site-footer .footer-social .social i {
+    font-size: 16px;
+}
+
+.site-footer .footer-social .social:hover {
+    transform: translateY(-3px);
+}
+
+
+.site-footer .footer-social .facebook {
+    background: transparent;
+    color: #1877F2;
+}
+
+.site-footer .footer-social .twitter {
+    background: transparent;
+    color: #1DA1F2;
+}
+
+.site-footer .footer-social .instagram {
+    background: transparent;
+    color: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.site-footer .footer-social .whatsapp {
+    background: transparent;
+    color: #25D366;
+}
+
+/* Instagram gradient can't be applied to font icon color; use background gradient + mask for better effect on modern browsers */
+.site-footer .footer-social .instagram {
+    position: relative;
+}
+
+.site-footer .footer-social .instagram i {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+
+    -webkit-text-fill-color: transparent;
+}
+
+.site-footer .small-bottom-row {
+    margin-top: 10px;
+    padding-top: 6px;
+}
+
+.site-footer .copyright {
+    margin: 0;
+    color: #bbb;
+}
+
+.site-footer .bottom-links {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.site-footer .bottom-links li {
+    display: inline;
 }

@@ -1,39 +1,310 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-   <link rel="stylesheet" href="cart.css">
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/fd48f3693c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="cart.css" />
+  </head>
+  <body>
     <header class="cart-header">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-       
-      </ul>
-    </div>
-  </div>
-</nav>
-
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Home > Cart</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Cart</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Shipping</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Payment</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
-    
-</body>
+    <h1 class="cart-heading">My Cart</h1>
+    <hr />
+    <section class="cart-section">
+      <div class="cart-container"></div>
+      <div class="cart-item-container">
+        <div class="cart-item">
+          <img src="assets/airmax-red.png" alt="Product Image" />
+          <div class="item-details">
+            <h5>Nike Airmax</h5>
+            <p>$10.00</p>
+            <p>Quantity: 1</p>
+          </div>
+          <div class="cart-adder">
+            <button class="btn btn-dark btn-sm">-</button>
+            <span class="quantity-display">1</span>
+            <button class="btn btn-dark btn-sm">+</button>
+          </div>
+        </div>
+        <div class="cart-item">
+          <img src="assets/Jordan 11.png" alt="Product Image" />
+          <div class="item-details">
+            <h5>Jordan 11</h5>
+            <p>$20.00</p>
+            <p>Quantity: 2</p>
+          </div>
+          <div class="cart-adder">
+            <button class="btn btn-dark btn-sm">-</button>
+            <span class="quantity-display">1</span>
+            <button class="btn btn-dark btn-sm">+</button>
+          </div>
+        </div>
+        <div class="cart-item">
+          <img src="assets/Jordan 3.png" alt="Product Image" />
+          <div class="item-details">
+            <h5>Jordan 3</h5>
+            <p>$20.00</p>
+            <p>Quantity: 2</p>
+          </div>
+          <div class="cart-adder">
+            <button class="btn btn-dark btn-sm">-</button>
+            <span class="quantity-display">1</span>
+            <button class="btn btn-dark btn-sm">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="order-section">
+        <h3>Your Order</h3>
+        <div class="sub-totals">
+          <div class="flex-row">
+            <span>Total items:</span>
+            <span>5</span>
+          </div>
+          <div class="flex-row">
+            <span>Subtotal:</span>
+            <span>$70.00</span>
+          </div>
+        </div>
+        <hr />
+        <div class="delivery">
+          <label class="form-label">Delivery Method:</label>
+          <div class="flex-row checkbox-row">
+            <div class="input-group">
+              <input
+                type="checkbox"
+                id="delivery"
+                name="interest"
+                value="delivery"
+                checked
+              />
+              <label for="delivery">Delivery</label>
+            </div>
+            <span class="price">$5.00</span>
+          </div>
+          <div class="flex-row checkbox-row">
+            <div class="input-group">
+              <input type="checkbox" name="pickup" id="pickup" />
+              <label for="pickup">Pickup</label>
+            </div>
+            <span class="price">$0.00</span>
+          </div>
+        </div>
+        <hr />
+        <div class="tax flex-row">
+          <span>Tax (7%):</span>
+          <span>$5.00</span>
+        </div>
+        <hr />
+        <div class="total-section flex-row">
+          <span>Total</span>
+          <span class="total-price">$75.00</span>
+        </div>
+        <button class="btn btn-primary">Proceed to Checkout</button>
+      </div>
+    </section>
+
+  <section>
+<div class="why-container">
+
+  <div class="why-card-container">
+    <div class="why-card">
+      <div class="why-icon">
+      <i class="fa-solid fa-truck-fast fa-3x"></i>
+      <h3>Affordable Shipping</h3>
+      <p>Get your orders delivered to your doorstep in record time with our efficient shipping services.</p>
+      </div>
+   </div>
+    <div class="why-card">
+      <div class="why-icon">
+      <i class="fa-solid fa-wallet"></i>
+      <h3>Flexible Payment</h3>
+      <p>Pay with ease using our secure and flexible payment options, including mobile money, credit cards, and more.</p>
+      </div>
+  </div>
+    <div class="why-card">
+    <div class="why-icon">
+      <i class="fa-solid fa-clock"></i>
+      <h3>24/7 Support</h3>
+      <p>Our customer support team is available around the clock to assist you with any questions or concerns.</p>
+  </div>
+  </div>
+</div>
+</section>
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <div class="row">
+          <div class="col-md-4 footer-col contact-col">
+            <h5 class="footer-heading">WAN KICKS</h5>
+            <p class="footer-text">
+              Premium footwear & accessories — fast shipping across Kenya. Have
+              questions? Reach us below.
+            </p>
+            <ul class="contact-list">
+              <li><strong>Address:</strong> Nairobi, Kenya</li>
+              <li>
+                <strong>Email:</strong>
+                <a href="mailto:support@wankicks.co">support@wankicks.co</a>
+              </li>
+              <li>
+                <strong>Phone:</strong>
+                <a href="tel:+254700000000">+254 700 000 000</a>
+              </li>
+            </ul>
+            <div class="footer-payments" aria-hidden="true">
+              <i class="fab fa-cc-visa"></i>
+              <i class="fab fa-cc-mastercard"></i>
+              <i class="fab fa-cc-amex"></i>
+              <i class="fab fa-cc-paypal"></i>
+            </div>
+          </div>
+
+          <div class="col-md-2 footer-col">
+            <h6 class="footer-heading">Shop</h6>
+            <ul class="footer-links">
+              <li><a href="#">New Arrivals</a></li>
+              <li><a href="#">Best Sellers</a></li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">Kids</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-2 footer-col">
+            <h6 class="footer-heading">Customer</h6>
+            <ul class="footer-links">
+              <li><a href="#">Track Order</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 footer-col newsletter-col">
+            <h6 class="footer-heading">Stay in the loop</h6>
+            <p class="footer-text">
+              Subscribe for exclusive deals, new releases and members-only
+              drops.
+            </p>
+            <form
+              class="newsletter-form"
+              action="#"
+              method="post"
+              aria-label="Subscribe to newsletter"
+            >
+              <label for="newsletter-email" class="visually-hidden"
+                >Email address</label
+              >
+              <div class="input-group mb-3">
+                <input
+                  id="newsletter-email"
+                  type="email"
+                  class="form-control"
+                  placeholder="Your email"
+                  aria-label="Email address"
+                  required
+                />
+                <button class="btn btn-light" type="submit">Subscribe</button>
+              </div>
+            </form>
+
+            <div class="footer-social" aria-label="Follow us">
+              <a
+                class="social facebook"
+                href="#"
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                class="social twitter"
+                href="#"
+                aria-label="Twitter"
+                target="_blank"
+                rel="noopener"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                class="social instagram"
+                href="#"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                class="social whatsapp"
+                href="#"
+                aria-label="WhatsApp"
+                target="_blank"
+                rel="noopener"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <div class="row align-items-center small-bottom-row">
+          <div class="col-md-6 small-left">
+            <p class="copyright">&copy; 2025 WAN KICKS. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 small-right text-md-end">
+            <ul class="bottom-links">
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Accessibility</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

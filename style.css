@@ -4,16 +4,13 @@
     box-sizing: border-box;
 }
 
-/* Ensure page content is not hidden under the fixed navbar */
+
 body {
     padding-top: 70px;
-    /* matches navbar height (adjust if needed) */
+
 }
 
-/* Keep global reset but avoid forcing nav height which conflicts with Bootstrap */
-/* let Bootstrap control nav sizing */
 
-/* Use container spacing instead of forcing .container-fluid globally */
 .container {
     max-width: 1140px;
 }
@@ -22,41 +19,38 @@ body {
     font-size: 18px;
 }
 
-/* Avoid large fixed padding for dropdowns; use margin utilities when needed */
 .dropdown-menu {
     min-width: 8rem;
 }
 
-/* Active link styling */
+
 .navbar-nav .nav-link.active {
     font-weight: 600;
     color: #000 !important;
 }
 
-/* Small responsive tweaks */
 @media (max-width: 576px) {
     body {
         padding-top: 80px;
     }
 }
 
-/* Carousel: make it fill the viewport height below the fixed navbar */
+
 .carousel,
 .carousel-inner,
 .carousel-item {
     height: calc(100vh - 70px);
-    /* viewport minus navbar height */
+
 }
 
 .carousel-item img {
     width: 100%;
     height: 60vh;
     object-fit: contain;
-    /* maintain aspect ratio and cover the area */
+
 
 }
 
-/* On small screens, limit carousel height so content below is visible without huge scrolling */
 @media (max-width: 576px) {
 
     .carousel,
@@ -71,14 +65,13 @@ main .carousel-item img {
 
 }
 
-/* Left sticky vertical social bar */
 .social-bar {
     position: fixed;
     left: 0;
     top: 40%;
     transform: translateY(-50%);
     z-index: 1050;
-    /* above most content but below modals */
+
 }
 
 .social-bar ul {
@@ -140,7 +133,7 @@ main .carousel-item img {
     }
 }
 
-/* Footer styles: black & white theme with colored social icons */
+
 .site-footer {
     background: #000;
     color: #fff;
@@ -244,7 +237,7 @@ main .carousel-item img {
     transform: translateY(-3px);
 }
 
-/* Preserve brand colors for social icons */
+
 .site-footer .footer-social .facebook {
     background: transparent;
     color: #1877F2;
@@ -272,7 +265,8 @@ main .carousel-item img {
 
 .site-footer .footer-social .instagram i {
     background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-    -webkit-background-clip: text;
+
+
     -webkit-text-fill-color: transparent;
 }
 
